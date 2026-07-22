@@ -62,3 +62,9 @@ footer {
 .event p {
     color: white;
 }
+.corner-image { 
+    position: fixed; 
+    right: 20px; 
+    top: 20px; 
+    width: 150px; 
+    border-radius: 15px; }
