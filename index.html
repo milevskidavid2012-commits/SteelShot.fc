@@ -1,82 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SteelShot FC Mobile</title>
+    <!-- Importing a bold, sporty font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<img class="corner-image" src="image_2026-07-22_215821590.png" alt="Event">
-
-<h1>SteelShot FC</h1>
-
-</body>
-
-<header>
-    <h1>⚽ SteelShot FC Mobile</h1>
-    <p>My Ultimate FC Mobile Fan Website</p>
-</header>
-
-<section>
-    <h2>🔥 My Team</h2>
-
-    <div class="card">
-        <h3>Team OVR: 123</h3>
-        <p>Welcome to my FC Mobile club!</p>
-    </div>
-</section>
-
-<section>
-    <h2>⭐ My Players</h2>
-
-    <div class="players">
-        <div class="player">
-            <h3>Son </h3>
-            <p>LW ⭐</p>
+    <!-- Main Navigation / Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <img class="corner-logo" src="image_2026-07-22_215821590.png" alt="SteelShot FC Logo">
+                <div class="logo-text">
+                    <h1>SteelShot <span class="highlight">FC</span></h1>
+                    <p>My Ultimate FC Mobile Fan Website</p>
+                </div>
+            </div>
         </div>
+    </header>
 
-        <div class="player">
-            <h3>Berbatov</h3>
-            <p>ST ⭐</p>
-        </div>
+    <main class="container">
+        
+        <!-- Team Overview / OVR -->
+        <section class="overview-section">
+            <div class="ovr-card">
+                <div class="ovr-badge">
+                    <span class="ovr-label">TEAM OVR</span>
+                    <span class="ovr-value">123</span>
+                </div>
+                <div class="ovr-details">
+                    <h2>Welcome to my FC Mobile Club!</h2>
+                    <p>Building the ultimate squad. Take a look at my current active roster below.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="player">
-            <h3>Vitinha</h3>
-            <p>CM ⭐</p>
-        </div>         
-    
-        <div class="player">
-            <h3>Robinson</h3>
-            <p>LB ⭐</p>
-        </div>
-    </div>
-    <body>
+        <!-- Squad Grid / Players -->
+        <section class="squad-section">
+            <h2 class="section-title">⭐ Starting Lineup</h2>
+            <div class="players-grid">
+                
+                <!-- Player 1: Son -->
+                <div class="player-card gold-tier">
+                    <div class="card-glow"></div>
+                    <div class="player-header">
+                        <span class="player-rating">94</span>
+                        <span class="player-position">LW</span>
+                    </div>
+                    <div class="player-info">
+                        <h3 class="player-name">Son</h3>
+                        <p class="player-stars">★★★★★</p>
+                    </div>
+                </div>
 
-<header>
-    <h1>SteelShot FC</h1>
-</header>
+                <!-- Player 2: Berbatov -->
+                <div class="player-card gold-tier">
+                    <div class="card-glow"></div>
+                    <div class="player-header">
+                        <span class="player-rating">95</span>
+                        <span class="player-position">ST</span>
+                    </div>
+                    <div class="player-info">
+                        <h3 class="player-name">Berbatov</h3>
+                        <p class="player-stars">★★★★★</p>
+                    </div>
+                </div>
 
-<div class="event">
-    <h2>☀️ Summer Special Event</h2>
-    <p>New FC Mobile event coming soon!</p>
-    <p>Rewards: Players, Packs & More</p>
-    <button>View Event</button>
-</div>
+                <!-- Player 3: Vitinha -->
+                <div class="player-card elite-tier">
+                    <div class="card-glow"></div>
+                    <div class="player-header">
+                        <span class="player-rating">91</span>
+                        <span class="player-position">CM</span>
+                    </div>
+                    <div class="player-info">
+                        <h3 class="player-name">Vitinha</h3>
+                        <p class="player-stars">★★★★☆</p>
+                    </div>
+                </div>         
+            
+                <!-- Player 4: Robinson -->
+                <div class="player-card elite-tier">
+                    <div class="card-glow"></div>
+                    <div class="player-header">
+                        <span class="player-rating">89</span>
+                        <span class="player-position">LB</span>
+                    </div>
+                    <div class="player-info">
+                        <h3 class="player-name">Robinson</h3>
+                        <p class="player-stars">★★★★☆</p>
+                    </div>
+                </div>
 
-</body>
+            </div>
+        </section>
 
-</section>
+        <!-- Live Event Showcase -->
+        <section class="event-section">
+            <div class="event-banner">
+                <div class="event-content">
+                    <span class="live-tag">LIVE EVENT</span>
+                    <h2 class="event-title">☀️ Summer Special Event</h2>
+                    <p class="event-description">A brand new FC Mobile summer campaign is launching soon! Earn exclusive seasonal players, resource packs, and limited-time achievements.</p>
+                    <button class="event-btn">View Event Details</button>
+                </div>
+            </div>
+        </section>
 
-<section>
-    <h2>🏆 FC Mobile News</h2>
-    <p>Events, players and updates coming soon!</p>
-</section>
+        <!-- News & Updates -->
+        <section class="news-section">
+            <h2 class="section-title">🏆 FC Mobile News</h2>
+            <div class="news-card">
+                <p>Stay tuned! Latest events, squad builder tips, and player rating updates are dropping soon.</p>
+            </div>
+        </section>
 
+    </main>
 
-<footer>
-    <p>Made by SteelShot 🔥</p>
-</footer>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>Made with 🔥 by <span class="footer-highlight">SteelShot</span></p>
+    </footer>
 
 </body>
 </html>
