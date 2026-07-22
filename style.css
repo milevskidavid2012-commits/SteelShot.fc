@@ -239,6 +239,16 @@ body {
     text-align: left;
 }
 
+.player-photo {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 0.9rem;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
 .player-name {
     font-size: 1.3rem;
     font-weight: 800;
