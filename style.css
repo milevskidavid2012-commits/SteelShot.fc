@@ -3,13 +3,13 @@
     --bg-dark: #0a0e17;
     --card-bg: rgba(18, 26, 43, 0.75);
     --card-border: rgba(255, 255, 255, 0.1);
-    --neon-blue: #00f0ff;
-    --neon-green: #39ff14;
-    --gold: #ffd700;
+    --neon-blue: #f2f8f8;
+    --neon-green: #40ac2d;
+    --gold: #d3cfbb;
     --gold-gradient: linear-gradient(135deg, #ffe066 0%, #b38600 100%);
     --elite-gradient: linear-gradient(135deg, #e2e8f0 0%, #64748b 100%);
-    --text-primary: #ffffff;
-    --text-secondary: #94a3b8;
+    --text-primary: #d4c2c2;
+    --text-secondary: #1062d6;
 }
 
 /* Reset & Base Styles */
@@ -183,7 +183,7 @@ body {
 
 .player-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 240, 255, 0.2);
+    box-shadow: 0 15px 30px rgba(55, 142, 148, 0.2);
     border-color: var(--neon-blue);
 }
 
@@ -231,7 +231,7 @@ body {
     background: rgba(255,255,255,0.05);
     padding: 4px 8px;
     border-radius: 6px;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(110, 7, 7, 0.1);
 }
 
 .player-info {
@@ -269,7 +269,7 @@ body {
 }
 
 .live-tag {
-    background: #ff5e00;
+    background: #9b6a4d;
     color: white;
     font-size: 0.75rem;
     font-weight: 900;
@@ -296,7 +296,7 @@ body {
 .event-btn {
     background: var(--gold-gradient);
     border: none;
-    color: #111;
+    color: #f1e6e6;
     padding: 12px 28px;
     font-weight: 700;
     font-size: 0.9rem;
@@ -310,7 +310,7 @@ body {
 
 .event-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
 }
 
 /* News Section */
@@ -329,8 +329,8 @@ body {
 
 /* Footer Section */
 .main-footer {
-    background: #060911;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    background: #132166;
+    border-top: 1px solid rgba(151, 27, 27, 0.05);
     padding: 2rem 0;
     font-size: 0.9rem;
     color: var(--text-secondary);
