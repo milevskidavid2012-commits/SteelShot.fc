@@ -1,70 +1,364 @@
-body {
+/* Color Palette & Global Variables */
+:root {
+    --bg-dark: #0a0e17;
+    --card-bg: rgba(18, 26, 43, 0.75);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --neon-blue: #00f0ff;
+    --neon-green: #39ff14;
+    --gold: #ffd700;
+    --gold-gradient: linear-gradient(135deg, #ffe066 0%, #b38600 100%);
+    --elite-gradient: linear-gradient(135deg, #e2e8f0 0%, #64748b 100%);
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+}
+
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url("image_2026-07-22_212502030.png");
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-dark);
+    /* Keeps your background image but overlays a dark gradient for superior text readability */
+    background-image: linear-gradient(rgba(10, 14, 23, 0.85), rgba(10, 14, 23, 0.95)), url("image_2026-07-22_212502030.png");
     background-size: cover;
     background-position: center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    color: gold;
-    text-align: center;
+    background-attachment: fixed;
+    color: var(--text-primary);
+    line-height: 1.6;
 }
 
-header {
-    background: #111827;
-    padding: 40px;
-    border-bottom: 3px solid #2563eb;
+/* Header & Navigation */
+.main-header {
+    background: rgba(10, 14, 23, 0.9);
+    border-bottom: 2px solid var(--neon-blue);
+    padding: 1.5rem 0;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-h1 {
-    font-size: 60px;
-    color: #60a5fa;
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-section {
-    padding: 25px;
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.card {
-    background: #1f2937;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 400px;
+.corner-logo {
+    width: 65px;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+.logo-text h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.logo-text .highlight {
+    color: var(--neon-blue);
+}
+
+.logo-text p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Layout Container */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+/* Headings */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    border-left: 4px solid var(--neon-blue);
+    padding-left: 12px;
+    letter-spacing: 1px;
+}
+
+/* Overview / Team OVR Card */
+.overview-section {
+    margin-bottom: 3rem;
+}
+
+.ovr-card {
+    background: linear-gradient(135deg, rgba(26, 37, 58, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.ovr-badge {
+    background: var(--gold-gradient);
+    padding: 1.5rem;
     border-radius: 15px;
-    box-shadow: 0 0 15px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    transform: rotate(-3deg);
 }
 
-li {
-    list-style: none;
-    background: #1e40af;
-    margin: 10px auto;
-    padding: 12px;
-    width: 200px;
-    border-radius: 10px;
+.ovr-label {
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: #3d2b00;
+    letter-spacing: 1px;
 }
 
-footer {
-    margin-top: 30px;
-    padding: 20px;
-    background: #111827;
-}
-/* Igraci */
-.players h2 {
-    color: #00aaff;
+.ovr-value {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #111;
+    line-height: 1;
 }
 
-/* Summer Special Event */
-.event h2 {
-    color: #ffd700;
+.ovr-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.event p {
+.ovr-details p {
+    color: var(--text-secondary);
+}
+
+/* Players Grid */
+.squad-section {
+    margin-bottom: 3rem;
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+/* EA FC-inspired Player Card */
+.player-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.player-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 240, 255, 0.2);
+    border-color: var(--neon-blue);
+}
+
+/* Subtle glowing accent inside the card */
+.card-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, rgba(0,0,0,0) 70%);
+    pointer-events: none;
+}
+
+.player-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+/* Tier specific card designs */
+.player-card.gold-tier .player-rating {
+    background: var(--gold-gradient);
+    color: #111;
+}
+.player-card.elite-tier .player-rating {
+    background: var(--elite-gradient);
+    color: #fff;
+}
+
+.player-rating {
+    font-size: 1.8rem;
+    font-weight: 900;
+    padding: 4px 10px;
+    border-radius: 8px;
+    line-height: 1.2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.player-position {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background: rgba(255,255,255,0.05);
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.player-info {
+    z-index: 1;
+    text-align: left;
+}
+
+.player-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+    letter-spacing: -0.5px;
+}
+
+.player-stars {
+    font-size: 0.8rem;
+    color: var(--gold);
+    letter-spacing: 2px;
+}
+
+/* Event Section Banner */
+.event-section {
+    margin-bottom: 3rem;
+}
+
+.event-banner {
+    background: linear-gradient(135deg, rgba(255, 107, 0, 0.15) 0%, rgba(255, 187, 0, 0.05) 100%), var(--card-bg);
+    border: 1px solid rgba(255, 153, 0, 0.3);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(255, 153, 0, 0.05);
+}
+
+.live-tag {
+    background: #ff5e00;
     color: white;
+    font-size: 0.75rem;
+    font-weight: 900;
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
 }
-.corner-image { 
-    position: fixed; 
-    right: 20px; 
-    top: 20px; 
-    width: 150px; 
-    border-radius: 15px; }
+
+.event-title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+}
+
+.event-description {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    max-width: 650px;
+}
+
+.event-btn {
+    background: var(--gold-gradient);
+    border: none;
+    color: #111;
+    padding: 12px 28px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.event-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+}
+
+/* News Section */
+.news-section {
+    margin-bottom: 4rem;
+}
+
+.news-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: left;
+    color: var(--text-secondary);
+}
+
+/* Footer Section */
+.main-footer {
+    background: #060911;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.footer-highlight {
+    color: var(--neon-blue);
+    font-weight: 700;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .ovr-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+    }
+    
+    .ovr-badge {
+        width: 100%;
+        transform: none;
+    }
+
+    .logo-area {
+        gap: 1rem;
+    }
+
+    .logo-text h1 {
+        font-size: 1.8rem;
+    }
+}
