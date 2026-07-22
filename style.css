@@ -49,3 +49,16 @@ footer {
     padding: 20px;
     background: #111827;
 }
+/* Igraci */
+.players h2 {
+    color: #00aaff;
+}
+
+/* Summer Special Event */
+.event h2 {
+    color: #ffd700;
+}
+
+.event p {
+    color: white;
+}
